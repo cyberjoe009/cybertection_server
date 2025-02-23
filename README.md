@@ -81,7 +81,7 @@ IP: If agent’s on Windows , use Kali’s IP, not 127.0.0.1.
 
 SSL: Test without SSL (comment out wrap_socket lines in both).
 ___________________________________________________________________________________________________________
-TROUBLESHOOYING
+TROUBLESHOOTING
 
 Why Commands Aren’t Sending
 Agent Not Selected: The GUI requires selecting an agent from the "Connected Agents" list before sending works.
