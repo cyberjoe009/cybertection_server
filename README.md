@@ -13,7 +13,7 @@ HOW TO USE
 
 Copy and paste code in a text editor or ide
 
-You must change the ipadress and port number in line 11.
+You must change the ipadress and port number in line 13.
 
 
 Using the Framework
